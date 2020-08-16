@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Airon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="http://localhost:3000/favicon.ico?v=2" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/authForms.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- <input id="isLoginned" type="hidden" name="isLoginned" value="false"> -->
+    
+    <nav class="nav" id="nav">
+        <div class="hamburger"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a onclick="validateForm()" href="#">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+    </nav>
+
+<h1 class="heading">Admin</h1>
+    <p id="loginStatus"></p>
+    <h1 id="LoginFail">Entered wrong credential, Try again! </h1>
+
+    <!-- <h1 id="LoginSuccess">You have log in successfully</h1> -->
+
+    <br>
+
+    <section id="authSection">
+        <div class="login" id="login">
+            <div class="login-triangle"></div>
+            <h2 class="login-header">Log in</h2>
+            <form class="login-container" role="form" name="loginForm" onsubmit="validateForm()">
+                <p><input type="email" id="email" name='email' placeholder="Email" required></p>
+                <p><input type="password" id="password" name='password' placeholder="Password"></p>
+                <p><input class="btn" onclick="validateForm()" value="Log in"></p>
+            </form>
+        </div>
+    </section>
+    <main id="mainContent">
+        <div class="container">
+            <div class="row ">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s6"><a class="active" href="#app-train">Train
+                                <i class="material-icons right tooltipped tick" data-postion="top" data-delay="50"
+                                    data-tooltip="Model trained successfully"
+                                    style="display: none;font-size: 50px;color: white;">done</i></a>
+                        </li>
+                        <li class="tab col s6"><a href="#app-run">Let's Go
+                                <i class="material-icons right tooltipped cross" data-postion="top" data-delay="50"
+                                    data-tooltip="First train the model"
+                                    style="font-size: 50px; color: red;">not_interested</i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="app-train" class="col s12">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Train Model</span>
+                                    <p>It is essential to train your model before using it. Press the button below to
+                                        start
+                                        training. Model doesn't learn an image again which it has already learnt to save
+                                        time.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a id="train-button" class="waves-effect waves-light btn tooltipped"
+                                        data-postion="bottom" data-delay="50" data-tooltip="Train the model"><i
+                                            class="material-icons right">trending_flat</i>Train</a>
+                                    <a id="clear-button" class="waves-effect waves-light btn tooltipped"
+                                        data-postion="bottom" data-delay="50" data-tooltip="Clear the model data"><i
+                                            class="material-icons right">delete</i>Clear Model</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress" style="display: none;">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
+                <div id="app-run" class="col s12">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card  darken-1">
+                                <div class="card-content">
+                                    <span class="card-title">Run Model</span>
+                                    <p>Click the below button to start the real-time face-recognition camera.
+                                    </p>
+                                </div>
+                                <div class="card-action">
+                                    <a id="run-button" class="waves-effect waves-light btn tooltipped"
+                                        data-postion="bottom" data-delay="50" data-tooltip="Run the model"><i
+                                            class="material-icons right">thumb_up</i>Run</a>
+                                    <a id="stop-button" class="waves-effect waves-light btn disabled tooltipped"
+                                        data-postion="bottom" data-delay="50" data-tooltip="Stop the model"><i
+                                            class="material-icons right">thumb_down</i>Stop</a>
+                                    <a id="halt-resume" class="waves-effect waves-light btn disabled tooltipped"
+                                        data-postion="bottom" data-delay="50" data-tooltip="Live Updates"><i
+                                            class="material-icons right">thumbs_up_down</i>Halt</a>
+                                    <!--<p>-->
+                                    <input class="with-gap" name="group1" type="radio" id="in" checked />
+                                    <label for="in" class="tooltipped" data-position="bottom" data-delay="50"
+                                        data-tooltip="Arriving visitors">In</label>
+                                    <input class="with-gap" name="group1" type="radio" id="out" />
+                                    <label for="out" class="tooltipped" data-position="bottom" data-delay="50"
+                                        data-tooltip="Leaving visitors">Out</label>
+                                    <!--</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="collapsible popout" data-collapsible="accordion" style="display:none;">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   
+
+    </main>
+    <!--Footer-->
+    <footer class="footer">
+        <div>
+            <div style="display: flex; justify-content: space-between;">
+                © 2019 Airon
+                <span><i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart"
+                        aria-hidden="true"> in India</i></span>
+            </div>
+        </div>
+    </footer>
+
+    <!--Template for showing faces recorded by camera-->
+    <script id="person-template" type="text/template">
+        <li>
+            <div class="collapsible-header" data-person-head="{{person_name_formatted}}"><i class="material-icons">{{icon_name}}</i>{{person_name}}</div>
+            <div class="collapsible-body person-data" data-person="{{person_name_formatted}}">
+            </div>
+        </li>
+    </script>
+
+    <!--Template for person details-->
+    <script id="person-details-template" type="text/template">
+        <p class="msg">{{msg}}</p>
+
+      
+
+
+        <table class="bordered responsive-table striped">
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <br>
+            <tbody>
+                <tr class='tableRow'>
+                    <td>Criminal Name</p>
+                    <td>{{name}}</p>
+                </tr>
+                <tr>
+                    <td>Criminal Code</p>
+                    <td>{{criminal_code}}</p>
+                </tr>
+                <tr>
+                    <td>Age</p>
+                    <td>{{age}}</p>
+                </tr>
+                <tr>
+                    <td>Gender</p>
+                    <td>{{gender}}</p>
+                </tr>
+                <tr>
+                    <td>No of Crimes Committed</p>
+                    <td>{{no_of_crimes_committed}}</p>
+                </tr>
+                
+                <tr>
+                    <td>Recent crime</p>
+                    <td>{{recent_crime}}</p>
+                </tr>
+
+                <tr>
+                    <td>Address</p>
+                    <td>{{address}}</p>
+                </tr>
+
+                
+                <tr>
+                    <td>Visiting Time</p>
+                    <td>{{timeIn}}</p>
+                </tr>
+            </tbody>
+        </table>
+    </script>
+
+    <!--Template for message-->
+    <script id="person-msg-template" type="text/template">
+        <p>{{msg}}</p>
+    </script>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!--For Offline-->
+    <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+    <!--For Online(see version, recommended 2.1.1)-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+    <!--Import materialize.js-->
+    <script type="text/javascript" src="js/libs/materialize.js"></script>
+    <script src="/js/libs/mustache.js"></script>
+    <script type="text/javascript" src="js/libs/instascan.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script type="text/javascript" src="js/nav.js"></script>
+
+    <script type="text/javascript" src="js/login.js"></script>
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+    <script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
+
+</body>
+
+</html>

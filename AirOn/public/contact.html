@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="dailyUI_002">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Contact form with google maps in background</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+
+	<link rel="icon" href="http://localhost:3000/favicon.ico?v=2" type="image/x-icon" />
+
+
+	<link rel="stylesheet" href="css/nav.css">
+
+	<link rel="stylesheet" href="./contact.css">
+
+
+</head>
+
+<body>
+
+
+	<nav class="nav" id="nav">
+		<div class="hamburger"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		</div>
+		<ul class="nav-links">
+			<li><a href="/">Home</a></li>
+			<li><a href="team.html">Team</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="about.html">About</a></li>
+
+		</ul>
+	</nav>
+
+	<h1 class="heading">Contact us</h1>
+	<section class="contactForm">
+		<div class="section1">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.418600991581!2d77.2102739150497!3d28.587216392881313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce395aebf3ee3%3A0x51088ef516d464ef!2sAirports+Authority+of+India!5e0!3m2!1sen!2sin!4v1561619949677!5m2!1sen!2sin"
+				width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+
+		<section class="section2">
+			<div class="contactform">
+				<h5>Drop us a msg</h5>
+				<form action="#">
+					<label for="firstname">
+						<i class="cntfrmicn fa fa-user"></i>
+						<input name="firstname" placeholder="Name" class="form-fields" type="text">
+					</label>
+					<label for="email">
+						<i class="cntfrmicn fa fa-envelope"></i>
+						<input name="email" placeholder="Email" class="form-fields" type="text">
+					</label>
+					<label for="contact">
+						<i class="cntfrmicn fa fa-phone"></i>
+						<input name="contact" placeholder="Contact Number" class="form-fields" type="text">
+					</label>
+					<label for="textarea">
+						<i class="cntfrmicn fa fa-comment"></i>
+						<textarea class="form-fields" placeholder="Your message" name="textarea" id="" cols="30"
+							rows="10"></textarea>
+					</label>
+					<button class="form-fields button" value="Send" type="submit">Send <i
+							class="fa fa-paper-plane"></i></button>
+				</form>
+			</div>
+		</section>
+	</section>
+
+
+	<footer class="footer">
+		<div>
+			<div style="display: flex; justify-content: space-between;">
+				© 2019 Airon
+				<span><i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"> in
+						India</i></span>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
