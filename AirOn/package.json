@@ -13,10 +13,10 @@
   "author": "Arpit Rajput",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.20.1",
     "compression": "^1.7.0",
     "ejs": "^2.6.2",
-    "express": "^4.15.3",
+    "express": "^4.18.2",
     "http": "0.0.0",
     "materialize-css": "^0.99.0",
     "mongoose": "^4.11.3",
