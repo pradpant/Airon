@@ -16,7 +16,7 @@
     "body-parser": "^1.17.2",
     "compression": "^1.7.0",
     "ejs": "^2.6.2",
-    "express": "^4.15.3",
+    "express": "^4.17.3",
     "http": "0.0.0",
     "materialize-css": "^0.99.0",
     "mongoose": "^4.11.3",
